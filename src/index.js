@@ -2,7 +2,6 @@ import { refs } from './partials/api';
 import { renderPicture, clearResults } from './partials/render';
 import { fetchPictures } from './partials/api';
 import Notiflix from 'notiflix';
-import axios from 'axios';
 refs.input.addEventListener('submit', onSubmit);
 refs.btn.addEventListener('click', onLoadMore);
 let searchQuery = '';
