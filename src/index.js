@@ -6,6 +6,7 @@ refs.input.addEventListener('submit', onSubmit);
 refs.btn.addEventListener('click', onLoadMore);
 let searchQuery = '';
 let currentPage = 1;
+refs.btn.style.display = 'none';
 async function onLoadMore() {
   currentPage += 1;
   try {
@@ -40,6 +41,7 @@ async function onSubmit(event) {
       return Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
+      hideButton();
     }
     renderPicture(hits);
     if (totalHits < 40) {
@@ -53,8 +55,8 @@ async function onSubmit(event) {
   }
 }
 function showButton() {
-  refs.btn.classList.remove('is-hidden');
+  refs.btn.style.display = 'block';
 }
 function hideButton() {
-  refs.btn.classList.add('is-hidden');
+  refs.btn.style.display = 'none';
 }
