@@ -1,2 +1,61 @@
 @import './common';
 @import './example';
+
+body {
+  background-color: yellowgreen;
+}
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 10px 10px;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.button:active,
+.button:hover {
+  outline: 0;
+}
+input {
+  align-items: center;
+  margin: auto;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: yellowgreen;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+}
+.gallery {
+  display: flex;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.photo-card {
+  margin: auto;
+  margin-bottom: 5px;
+}
