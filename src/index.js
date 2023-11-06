@@ -6,6 +6,7 @@ refs.input.addEventListener('submit', onSubmit);
 refs.btn.addEventListener('click', onLoadMore);
 let searchQuery = '';
 let currentPage = 1;
+const perPage = 40;
 refs.btn.style.display = 'none';
 async function onLoadMore() {
   currentPage += 1;
@@ -18,7 +19,13 @@ async function onLoadMore() {
         "We're sorry, but you've reached the end of search results."
       );
     }
-    showButton();
+    const totalPages = Math.ceil(hits / perPage);
+    if (currentPage > totalPages) {
+      hideButton();
+      Notiflix.Notify.info(
+        "We're sorry, but you've reached the end of search results."
+      );
+    }
   } catch (error) {
     Notiflix.Notify.warning(`Warning!${error.message}`);
   }
